@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script>   const BASE_URL = "{% url 'login' %}";
+               const HOME_URL = "{% url 'home' %}";
+               const CHANGE_URL = "{% url 'change' %}";
+    </script>
+    <script  src="{% static 'MyJs.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <h2>Login</h2>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="button" onclick="handleLogin()">Login</button>
+        <p>Don't have an account? <a href="{% url 'signup' %}">Sign up</a></p>
+         <div id="errorMessage" class="error"></div>
+
+    </form>
+</body>
+</html>

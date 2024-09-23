@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'change.css' %}">
+    <title>Change Password</title>
+</head>
+<body>
+    <form method="post" action="{% url 'change' %}">
+        {% csrf_token %}
+        <h2>Change Password</h2>
+
+         <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="new_password">New Password:</label>
+        <input type="password" id="password" name="password" required>
+
+
+        <button  type="submit">Change Password</button>
+    </form>
+</body>
+</html>

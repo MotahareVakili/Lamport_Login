@@ -1,0 +1,29 @@
+ body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+ form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+ label {
+            margin-bottom: 8px;
+        }
+
+ input {
+            margin-bottom: 16px;
+        }
+
+ button {
+            cursor: pointer;
+            background-color:green;
+            color: white;
+            width: 80px;
+            height: 30px;
+        }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px;
+            margin-right: 10px;
+            cursor: pointer;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Welcome to the Home Page</h2>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac quam id nulla fermentum finibus in nec arcu.
+        Nullam vel accumsan elit, vel vestibulum ligula. Vivamus ut bibendum lacus.
+    </p>
+
+    <button onclick="location.href='{% url 'change' %}'" style="background-color: aquamarine;">Change Password</button>
+    <button onclick="location.href='{% url 'login' %}'" style="background-color: lightcoral">Log Out</button>
+</body>
+</html>
